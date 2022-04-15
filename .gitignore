@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# Build Directory and Hidden Files
+cmake-build-debug/
+build/
+.idea/
