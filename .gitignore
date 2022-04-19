@@ -33,5 +33,6 @@
 
 # Build Directory and Hidden Files
 cmake-build-debug/
+cmake-build/
 build/
 .idea/
