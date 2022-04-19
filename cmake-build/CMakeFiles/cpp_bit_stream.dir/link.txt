@@ -1,1 +1,0 @@
-/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG CMakeFiles/cpp_bit_stream.dir/bitstream.cpp.o CMakeFiles/cpp_bit_stream.dir/example.cpp.o -o cpp_bit_stream 
