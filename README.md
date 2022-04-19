@@ -33,7 +33,7 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefff
 ```
 ## Build Requirements:
 <ul>
-<li>CMake</li>
+<li><a href="https://github.com/Kitware/CMake" target="_top">CMake</a></li>
 </ul>
 
 ## Building
