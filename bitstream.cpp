@@ -9,10 +9,10 @@
 #define SWAP(x, y) { (x) ^= (y); (y) ^= (x); (x) ^= (y); }
 
 BitStream::BitStream( uint64_t nblocks): n_block( nblocks )
-    {
-        if( n_block > 0 )
-        head = allocBlock( n_block );
-    }
+{
+	if( n_block > 0 )
+	head = allocBlock( n_block );
+}
 
 BitStream::BitStream( const std::string& w )
 {
@@ -31,12 +31,12 @@ BitStream& BitStream::operator=( BitStream copy )
     return *this;
 }
 
-BitStream BitStream::operator<<( uint64_t count ) const
+BitStream BitStream::operator<<( size_t count ) const
 {
     return shl( count );
 }
 
-BitStream BitStream::operator>>( uint64_t count ) const
+BitStream BitStream::operator>>( size_t count ) const
 {
     return shr( count );
 }
@@ -57,7 +57,8 @@ BitStream BitStream::operator~()
 BitStream BitStream::operator[]( uint64_t pos ) const
 {
     if( pos >= n_block * BLOCK_SIZE )
-        return false;
+        return BitStream();
+
     BitStream result;
     result.head = allocBlock( n_block );
     result.n_block = n_block;
@@ -89,6 +90,8 @@ bool BitStream::toBool() const
     return false;
 }
 
+
+
 void BitStream::swap( BitStream& rhs )
 {
     using std::swap;
@@ -114,7 +117,7 @@ void BitStream::resize( uint64_t newsize )
     }
     else if( newsize < n_block )
     {
-        BitStream bs = clone( newsize );
+        BitStream bs = clone( *this, newsize);
         swap( bs );
     }
     n_block = newsize;

@@ -90,9 +90,9 @@ public:
 
     BitStream& operator=( BitStream copy );
 
-    BitStream operator<<( uint64_t count ) const;
+    BitStream operator<<( size_t count ) const;
 
-    BitStream operator>>( uint64_t count ) const;
+    BitStream operator>>( size_t count ) const;
 
     BitStream operator~();
 
@@ -146,7 +146,6 @@ private:
     BitStream shr( uint64_t count ) const;
 
     static BitStream clone( const BitStream& src, uint64_t limit = -1 );
-
 
     static void DEBUG_VIS printUnit( const Unit& u );
 

@@ -1,0 +1,3 @@
+/data/data/com.termux/files/home/Workspace/Algorithms/BitStream/cmake-build/CMakeFiles/cpp_bit_stream.dir
+/data/data/com.termux/files/home/Workspace/Algorithms/BitStream/cmake-build/CMakeFiles/edit_cache.dir
+/data/data/com.termux/files/home/Workspace/Algorithms/BitStream/cmake-build/CMakeFiles/rebuild_cache.dir
